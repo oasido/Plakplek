@@ -1,0 +1,98 @@
+*,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+::-moz-selection {
+  background: #5e2750ad;
+}
+::selection {
+  background: #5e2750ad;
+}
+
+#wrapper {
+  display: flex;
+  font-size: 1.2rem;
+  margin: 1.2rem;
+}
+
+#numbers {
+  padding-right: 1rem;
+  color: darkgray;
+  user-select: none;
+}
+
+#text {
+  font-size: 1.2rem;
+  padding: 0;
+  background-color: transparent;
+}
+
+textarea {
+  background-color: transparent;
+  resize: none;
+  width: 100%;
+  padding: 0;
+  min-height: calc(100vh - 3rem);
+  border: none;
+  outline: none;
+  font-family: Consolas, 'Lucida Console', Monaco, monospace;
+  font-style: normal;
+  color: #c1c3c4;
+}
+
+textarea:focus {
+  border: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: right;
+  vertical-align: middle;
+  position: fixed;
+  top: 0;
+  right: 0;
+  user-select: none;
+  width: 100%;
+}
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+.buttons a {
+  margin: 0;
+  padding: 0.1rem 0.5rem 0 0;
+  text-decoration: none;
+}
+
+.buttons a:hover {
+  text-decoration: underline;
+}
+
+.buttons .faded {
+  user-select: text;
+  color: #969696;
+  display: flex;
+  margin: auto;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.buttons .faded:hover {
+  text-decoration: none;
+  color: #969696;
+}
+
+form {
+  max-width: 100%;
+}
+
+form textarea {
+  margin-bottom: 0;
+}

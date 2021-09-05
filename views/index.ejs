@@ -1,0 +1,18 @@
+<%- include('templates/header.ejs') %>
+
+<div class="buttons">
+ <a href="/new">nieuwe</a>
+ <a href="/">plakplek</a>
+</div>
+
+
+<div id="wrapper">
+  <div id="numbers">
+    <% for( let i = 1; i <= code.split('\n').length; i++ ) { %>
+    <div><%= i %></div>
+    <% } %>
+  </div>
+  <pre><code class="<%= locals.language ? `language-${locals.language}` : "" %>" id="text"><%= locals.code %></code></pre>
+</div>
+
+<%- include('templates/footer.ejs') %>

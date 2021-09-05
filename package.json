@@ -1,0 +1,18 @@
+{
+  "name": "plakplek",
+  "version": "1.0.0",
+  "description": "A place to save & share text",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "npx nodemon app.js"
+  },
+  "author": "Ofek Asido",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.4"
+  }
+}

@@ -1,0 +1,17 @@
+<%- include('templates/header.ejs') %>
+<form id="submit-form" action="/save" method="post">
+  <div class="buttons">
+    <a href="javascript:void()" onclick="document.getElementById('submit-form').submit();">opslaan</a>
+    <a href="/">plakplek</a>
+  </div>
+
+  <div id="wrapper">
+    <div id="numbers">&gt;</div>
+    <textarea spellcheck="false" autofocus name="value"><%= locals.code %></textarea>
+  </div>
+</form>
+
+<script>
+  autosize(document.querySelector('textarea'));
+</script>
+<%- include('templates/footer.ejs') %>
