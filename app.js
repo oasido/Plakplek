@@ -3,13 +3,13 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-
+const dotenv = require('dotenv');
 require('dotenv').config();
 
 // Add MongooseDB
 const Document = require('./models/Document');
 const mongoose = require('mongoose');
-mongoose.connect(`mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.nl3l0.mongodb.net/plakplek?retryWrites=true&w=majority`, {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/plakplek', {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
@@ -30,7 +30,6 @@ app.get('/', (req, res) => {
 
 Een plek om tekstbestanden te delen met je vrienden, alsof het 1983 is!`;
   res.render('index', { code, language: 'plaintext' });
-  console.log(process.env.PORT);
 });
 
 // New text
