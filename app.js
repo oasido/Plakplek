@@ -76,5 +76,5 @@ app.use(function (err, req, res, next) {
 });
 
 app.listen(process.env.PORT || port, () => {
-  console.log(`Plakplek is running and listening at http://localhost:${port}`);
+  console.log(`Plakplek is running and listening on port ${port}`);
 });
