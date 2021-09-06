@@ -96,3 +96,7 @@ form {
 form textarea {
   margin-bottom: 0;
 }
+
+pre {
+  overflow: inherit;
+}
